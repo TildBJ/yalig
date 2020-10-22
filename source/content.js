@@ -21,6 +21,7 @@ function insertIntoValueElement(element, text) {
 	element.selectionStart = start;
 	element.selectionEnd = start;
 	element.focus();
+	element.dispatchEvent(new Event('input', { 'bubbles': true }));
 	return true;
 }
 
